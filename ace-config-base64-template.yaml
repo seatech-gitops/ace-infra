@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Template
+metadata:
+  name: ace-configuration-base64
+  annotations:
+    description: "Configuration template for ACE"
+objects:
+- apiVersion: appconnect.ibm.com/v1beta1
+  kind: Configuration
+  metadata:
+    name: ${NAME}
+  spec:
+    type: ${TYPE}
+    contents: ${CONTENTS}
+parameters:
+- description: Name of the Configuration
+  name: NAME
+- description: Type of Configuration
+  name: TYPE
+- description: Base64 Contents
+  name: CONTENTS
