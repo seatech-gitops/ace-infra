@@ -1,3 +1,3 @@
-FROM cp.icr.io/cp/appc/ace-server-prod@sha256:8df2fc5e76aa715e2b60a57920202cd000748476558598141a736c1b0eb1f1a3
+FROM cp.icr.io/cp/appc/ace-server-prod@sha256:bdeb8b839be9e095bf3c74be8b9f02f54cf6c0a740b8f45f93d01265549d9e83
 
 COPY <bardir>/*.bar /home/aceuser/initial-config/bars/
