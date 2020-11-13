@@ -27,6 +27,7 @@ objects:
       containers:
         runtime:
           image: ${IMAGE}
+          imagePullPolicy: Always
     configurations: "${{CONFIGURATIONS}}"
 parameters:
 - description: Name of the IntegrationServer
