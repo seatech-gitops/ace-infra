@@ -28,7 +28,7 @@ objects:
         runtime:
           image: ${IMAGE}
           imagePullPolicy: Always
-    configurations: "${{CONFIGURATIONS}}"
+    configurations: ${{CONFIGURATIONS}}
 parameters:
 - description: Name of the IntegrationServer
   name: NAME
