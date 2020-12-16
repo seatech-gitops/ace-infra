@@ -1,24 +1,9 @@
-apiVersion: v1
-kind: Template
+apiVersion: appconnect.ibm.com/v1beta1
+kind: Configuration
 metadata:
-  name: configuration-with-data
-objects:
-- apiVersion: appconnect.ibm.com/v1beta1
-  kind: Configuration
-  metadata:
-    name: ${NAME}
-    labels:
-      app.kubernetes.io/instance: ${RELEASE_NAME}
-  spec:
-    type: ${TYPE}
-    contents: ${CONTENTS}
-parameters:
-- description: Name of the Configuration
-  name: NAME
-- description: Type of Configuration
-  name: TYPE
-- description: Contents of the configuration, encoded in base64
-  name: CONTENTS
-- description: Name of the release for which this object was created
-  name: RELEASE_NAME
-  
+  name: ${NAME}
+  labels:
+    app.kubernetes.io/instance: ${RELEASE_NAME}
+spec:
+  type: ${TYPE}
+  contents: ${CONTENTS}
