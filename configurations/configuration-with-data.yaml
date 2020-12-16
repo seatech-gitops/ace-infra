@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: Template
 metadata:
-  name: ace-configuration-base64
-  annotations:
-    description: "Configuration template for ACE"
+  name: configuration-with-data
 objects:
 - apiVersion: appconnect.ibm.com/v1beta1
   kind: Configuration
   metadata:
     name: ${NAME}
+    labels:
+      app.kubernetes.io/instance: ${RELEASE_NAME}
   spec:
     type: ${TYPE}
     contents: ${CONTENTS}
@@ -17,5 +17,8 @@ parameters:
   name: NAME
 - description: Type of Configuration
   name: TYPE
-- description: Base64 Contents
+- description: Contents of the configuration, encoded in base64
   name: CONTENTS
+- description: Name of the release for which this object was created
+  name: RELEASE_NAME
+  
