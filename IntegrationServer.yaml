@@ -1,38 +1,24 @@
-apiVersion: v1
-kind: Template
+apiVersion: appconnect.ibm.com/v1beta1
+kind: IntegrationServer
 metadata:
-  name: integration-server
-  annotations:
-    description: "Integration Server template for ACE"
-objects:
-- apiVersion: appconnect.ibm.com/v1beta1
-  kind: IntegrationServer
-  metadata:
-    name: ${NAME}
-  spec:
-    designerFlowsOperationMode: disabled
-    license:
-      accept: true
-      license: L-APEH-BPUCJK
-      use: CloudPakForIntegrationNonProduction
-    replicas: 1
-    router:
-      timeout: 120s
-    service:
-      endpointType: http
-    useCommonServices: true
-    version: 11.0.0.10-r1
-    adminServerSecure: true
-    pod:
-      containers:
-        runtime:
-          image: ${IMAGE}
-          imagePullPolicy: Always
-    configurations: "${{CONFIGURATIONS}}"
-parameters:
-- description: Name of the IntegrationServer
-  name: NAME
-- description: Custom Image
-  name: IMAGE
-- description: Configurations List
-  name: CONFIGURATIONS
+  name: ${NAME}
+spec:
+  designerFlowsOperationMode: disabled
+  license:
+    accept: true
+    license: L-APEH-BPUCJK
+    use: CloudPakForIntegrationNonProduction
+  replicas: 1
+  router:
+    timeout: 120s
+  service:
+    endpointType: http
+  useCommonServices: true
+  version: 11.0.0.10-r1
+  adminServerSecure: true
+  pod:
+    containers:
+      runtime:
+        image: ${IMAGE}
+        imagePullPolicy: Always
+  configurations: ${{CONFIGURATIONS}}
