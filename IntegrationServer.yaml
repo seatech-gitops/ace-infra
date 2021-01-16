@@ -21,4 +21,3 @@ spec:
       runtime:
         image: ${IMAGE}
         imagePullPolicy: Always
-  configurations: ${{CONFIGURATIONS}}
