@@ -12,7 +12,7 @@ spec:
   router:
     timeout: 120s
   service:
-    endpointType: https
+    endpointType: http
   useCommonServices: true
   version: 11.0.0.10-r1
   adminServerSecure: true
