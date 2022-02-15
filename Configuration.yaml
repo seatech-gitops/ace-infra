@@ -4,4 +4,4 @@ metadata:
   name: ${NAME}
 spec:
   type: ${TYPE}
-  contents: ${CONTENTS}
+  data: ${DATA}
