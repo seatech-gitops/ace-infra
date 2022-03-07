@@ -6,15 +6,15 @@ spec:
   designerFlowsOperationMode: disabled
   license:
     accept: true
-    license: L-APEH-BPUCJK
-    use: CloudPakForIntegrationNonProduction
-  replicas: 2
+    license: ${LICENSE}
+    use: ${LICENSE_USE}
+  replicas: 1
   router:
     timeout: 120s
   service:
-    endpointType: https
+    endpointType: ${SERVICE_ENDPOINT_TYPE}
   useCommonServices: true
-  version: 11.0.0.10-r2
+  version: ${VERSION}
   adminServerSecure: true
   pod:
     containers:
