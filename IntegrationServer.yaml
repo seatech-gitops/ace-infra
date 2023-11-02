@@ -14,7 +14,7 @@ spec:
   service:
     endpointType: ${SERVICE_ENDPOINT_TYPE}
   useCommonServices: true
-  version: ${VERSION}
+  version: '${VERSION}'
   adminServerSecure: true
   pod:
     containers:
